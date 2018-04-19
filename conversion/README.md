@@ -1,0 +1,1 @@
+This directory contains scripts used to convert a trained pytorch model using the codebase from [github.com/gsig/charades-algorithms](https://github.com/gsig/charades-algorithms) to TensorFlow as well as freezing the TensorFlow model.

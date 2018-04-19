@@ -1,6 +1,6 @@
 # Charades Webcam
 
-A real-time smart webcam application using TensorFlow and [OpenCV](http://opencv.org/).
+A real-time smart webcam application using the [Charades dataset](http://allenai.org/plato/charades/), [TensorFlow](https://www.tensorflow.org), and [OpenCV](http://opencv.org/).
 
 ![Holding a webcam demo](./media/holding_webcam.gif)
 

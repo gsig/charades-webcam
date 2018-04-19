@@ -124,7 +124,6 @@ if __name__ == '__main__':
                                       height=args.height).start()
     fps = FPS().start()
 
-    c = 0
     while True:  # fps._numFrames < 120
         frame = video_capture.read()
         input_q.put(frame)
@@ -133,8 +132,6 @@ if __name__ == '__main__':
 
         output_rgb = cv2.cvtColor(output_q.get(), cv2.COLOR_RGB2BGR)
         cv2.imshow('Video', output_rgb)
-        cv2.imwrite('output/{:06d}.png'.format(c),output_rgb)
-        c += 1
         fps.update()
 
         print('[INFO] elapsed time: {:.2f}'.format(time.time() - t))

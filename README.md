@@ -8,10 +8,10 @@ A real-time smart webcam application using TensorFlow and [OpenCV](http://opencv
 
 ## Information
 
-The key to building intelligent AI systems is data: Data with the right insight into our lives. Since 2016 we have been using our [Charades dataset](http://allenai.org/plato/charades/) to train models that understand videos of boring daily activities, such as `watching TV`, `sitting on a couch`, `looking outside a window`. This repository takes a tiny/fast SqueezeNet 1.1 frozen tensorflow model trained on the Charades dataset and runs it on a real-time webcam feed. Note that this is a simple model that achieves 13.5% mean average precision on the Charades benchmark, but there are now sophisticated models that obtain 34.4% (Google DeepMind) and 39.5% (Carnegie Mellon University), therefore this is a simple real-time model that we hope will allow everyone to use this in various applications.
+The key to building intelligent AI systems is data: Data with the right insight into our lives. Since 2016 we have been using our [Charades dataset](http://allenai.org/plato/charades/) to train models that understand videos of boring daily activities, such as `watching TV`, `sitting on a couch`, `looking outside a window`. This repository takes a tiny/fast SqueezeNet 1.1 frozen TensorFlow model trained on the [Charades dataset](http://allenai.org/plato/charades/) using the [Charades Algorithms codebase](https://github.com/gsig/charades-algorithms) and runs it on a real-time webcam feed. Note that this is a simple frame-classification model that achieves 13.5% mean average precision on the Charades benchmark, but there are now sophisticated models that obtain 34.4% (Google DeepMind) and 39.5% (Carnegie Mellon University), therefore this is a simple real-time model that we hope will allow anyone to use this in various applications. First one to use this in a Pi/Phone wins a beer from me (restrictions apply).
 
 ## Getting Started
-1. Packages:  matplotlib, numpy via pip, or alternatively `conda env create -f environment.yml`
+1. Packages:  matplotlib, numpy, Pillow, or alternatively `conda env create -f environment.yml`
 2. `python charades_webcam.py`
     Optional arguments (default value):
     * Device index of the camera `--source=0`
@@ -24,6 +24,7 @@ The key to building intelligent AI systems is data: Data with the right insight 
 - [Anaconda / Python 3.5](https://www.continuum.io/downloads)
 - [TensorFlow 1.2](https://www.tensorflow.org/)
 - [OpenCV 3.0](http://opencv.org/)
+- (All requirements should be available through pip/conda)
 
 ## Notes
 - OpenCV 3.1 might crash on OSX after a while. See open issue and solution [here](https://github.com/opencv/opencv/issues/5874).
